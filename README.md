@@ -28,8 +28,11 @@ Final formatting of the data was performed to make it easier to quickly draw con
 
 Summary:
 
+Benefits/Disadvantages of code refactoring
+The code use for this analysis was refactored from an original code that did not index the data by ticker in order to utilize the forloops more efficiently.  In general, refactoring code has the benefit of optimizing code for faster execution which increases the scalability to accept larger potential datasets.  The code can be made easier to understand and modify later. Refactoring code can also often also uncover bugs and limitations of code. However, refactoring takes time and unless the end user will be appling the code to very large datasets, opimizations may not always be noticed. In this case the difference between 0.3 seconds and 0.04 seconds is neglegable to the end user. 
 
-
+Original vs Refactored Stock Analysis Code
+The refactored code is about 750% faster than the original code, which when scaled to massive sets of data can save a lot of time.  The refactored code also makes quality of life differences to the end user, allowing them to pick the dataset by year they want to analyze. However, a disadvantage of this code is that it creates three arrays of data to store all the ticker information.  While in the scale of this project there is negligable impact on modern hardware, if this project were scaled up, there would likely be a situation where RAM storage may become a problem.  The original code looped and wrote data directly to the spreadsheet instead of committing code to volatile memory.
 
 
 
